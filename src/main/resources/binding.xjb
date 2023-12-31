@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxws:bindings
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+        jaxb:version="2.1"
+        jaxb:extensionBindingPrefixes="inheritance"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        wsdlLocation="my_wsdl.wsdl">
+    <jaxws:bindings node="//xs:complexType[@name='BookType']">
+        <inheritance:implements>com.example.demo.DemoInterface</inheritance:implements>
+        <jaxb:class name="Book"/>
+    </jaxws:bindings>
+</jaxws:bindings>
